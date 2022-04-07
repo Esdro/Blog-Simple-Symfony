@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    Accueil 
+{% endblock %}
+
+{% block body %}
+<div class="container">
+        <h1 class="text-center"> {{article.title}} </h1>
+   <div class="row">
+       <div class=' card col-12'>
+    <img href="public/assets/images/article/{{article.image}}" class='img-fluid' alt="{{ article.title }}">
+    <div class="card-body">
+    <p class="text-center"> {{article.title}} </p>
+    <p class="text-justify"> {{article.content  | raw}} </p>
+    </div>
+    <div class="card-footer">
+    <p class='mt-2 text-bold'> Écrit par <strong> {{ article.auteur }} </strong> </p>
+    </div>
+       </div>
+   </div>
+   </div>
+{% endblock %}

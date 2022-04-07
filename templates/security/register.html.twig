@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+   Blog - Inscription 
+{% endblock %}
+
+{% block body %}
+    <div class='container'>
+
+        <h1 class='text-center'> {{controller_name}} </h1>
+        {{ form_start(form) }} 
+                {{ form_row(form.username, {'label': 'Pseudo', 'attr':{
+                    'placeholder': 'Saisissez un nom d\'utilisateur'
+                } }) }}
+                {{ form_row(form.firstname, {'label': 'Prénom', 'attr':{
+                    'placeholder': 'Saisissez votre prénom'
+                } }) }}
+                {{ form_row(form.lastname, {'label': 'Nom', 'attr':{
+                    'placeholder': 'Saisissez votre nom ',
+                    'title': 'Votre nom de faille'
+                } }) }}
+                {{ form_row(form.email, {'label': 'Email', 'attr':{
+                    'placeholder': 'Saisissez votre adresse e-mail'
+                } }) }}
+                {{ form_row(form.password, {'label': 'Mot de passe', 'attr':{
+                    'placeholder': 'Saisissez un mot de passe'
+                } }) }}
+                {{ form_row(form.passwordConfirm, {'label': 'Confirmation mot de passe', 'attr':{
+                    'placeholder': 'Confirmer votre mot de passe'
+                } }) }}
+                <button type='submit' class='btn btn-lg btn-success btn-block mt-2'> S'inscrire </button> 
+        {{ form_end(form) }}
+
+    </div>
+{% endblock %}
